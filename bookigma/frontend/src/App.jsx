@@ -1,5 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 
 import { ThemeProvider } from './context/ThemeProvider';
@@ -141,6 +142,7 @@ export default function App() {
             <ToastProvider>
               <ScrollToTop />
               <Shell />
+              <Analytics />
             </ToastProvider>
           </AppProvider>
         </AuthProvider>
